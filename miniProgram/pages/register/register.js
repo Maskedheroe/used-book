@@ -13,7 +13,7 @@ Page({
  login:function(e){
    let data = e.detail.value;
    wx.request({
-     url: 'http://sunshine-sun.cn:8080/user/register',
+     url: 'http://localhost:8080/user/register',
      method: 'POST',
      data: {
        college: data.collage,

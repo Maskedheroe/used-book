@@ -1,4 +1,5 @@
 // pages/login/login.js
+// todo 修改Server地址
 const app = getApp();
 Page({
 
@@ -19,7 +20,7 @@ Page({
   login: function (e) {
     let data = e.detail.value;
     wx.request({
-      url: 'http://sunshine-sun.cn:8080/user/login', 
+      url: 'http://localhost:8080/user/login', 
       method: 'POST',
       data: {
         mail: data.user,

@@ -30,7 +30,7 @@ public class UserController {
     @PostMapping("/login")
     public Response login(@RequestBody LoginDTO loginDTO) {
         User user = userService.login(loginDTO.getMail(), loginDTO.getPassword());
-        if (null == user) {
+        if (user == null) {
             return Response.forbidden(null);
         } else {
             return Response.ok(user);
